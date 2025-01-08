@@ -1,0 +1,41 @@
+""" 1 = rock
+    2 = paper
+    3 = scissors
+"""
+import random
+computer_choice=random.choice([1,2,3])
+cdict={
+    1:"rock",2:"paper",3:"scis"
+}    
+ydict={
+    "rock":1,"paper":2,"scis":3
+}
+user_choice = input("Enter a choice (rock, paper, scis): ")
+while user_choice not in ["rock", "paper", "scis"]:
+    user_choice = input("Invalid input. Please enter a choice (rock, paper, scis)")
+
+user = ydict[user_choice]
+print(f"You chose {cdict[user]}\nComputer chose {cdict[computer_choice]}")
+
+if(user == computer_choice):
+    print("It's a tie!")
+
+if(user==1 and computer_choice==2):         #-1
+    print("\nRESULT: you lose!\n")
+elif(user==1 and computer_choice==3):       #-2
+    print("\nRESULT: you win!\n")
+elif(user==2 and computer_choice==1):       #1
+    print("\nRESULT: you win!\n")
+elif(user==2 and computer_choice==3):       #-1
+    print("\nRESULT: you lose!\n")
+elif(user==3 and computer_choice==1):       #2
+    print("\nRESULT: you lose!\n")
+elif(user==3 and computer_choice==2):       #1
+    print("\nRESULT: you win!\n")
+    
+'''
+if((user-computer_choice)==-2 or (user-computer_choice)==1):
+    print("\nRESULT: you win!\n")
+else:
+    print("\nRESULT: you lose!\n")
+'''
