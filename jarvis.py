@@ -6,7 +6,7 @@ import webbrowser
 import musicLibrary
 
 # Set your Gemini API key
-genai.configure(api_key="AIzaSyDT-9-qcOKKOxAbwDupSV3HImX5QsHA-wA")  # Replace with your actual Gemini API key
+genai.configure(api_key="Your_API_Key")  # Replace with your actual Gemini API key
 
 # Initialize the text-to-speech engine
 engine = pyttsx3.init()
